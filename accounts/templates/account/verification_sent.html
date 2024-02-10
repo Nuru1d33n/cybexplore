@@ -1,0 +1,38 @@
+{% extends "account/base_entrance.html" %}
+{% load i18n static %}
+
+{% block head_title %}
+    {% trans "Verify Your Email Address" %}
+{% endblock head_title %}
+{% block content %}
+<div class="wrapper">
+    <div class="auth-content">
+        <div class="card">
+            <div class="card-body">
+                <div class="mb-4">
+                    <img class="brand" style="width: 200px;" src="{% static 'assets/img/logo-edi.png' %}" alt="bootstraper logo">
+                </div>
+                <h5 class="mb-4 text-muted">
+                    {% trans "Verify Your Email Address" %}
+                </h6>
+                
+                <p style="margin: 10px 0;">
+                    {% blocktrans %}We have sent an email to you for verification. {% endblocktrans %}
+                </p>
+                <p style="margin: 10px 0;">
+                    {% blocktrans %}Follow the link provided to finalize the signup process. {% endblocktrans %}
+                </p>
+                
+                <h6 class='text-muted'>Note: </h>
+                <p>
+                    {% blocktrans %} If you do not see the verification email in your main inbox, check your spam folder. {% endblocktrans %}
+                </p>
+                <br class="clear">
+  
+                <p class="mb-0 text-muted">{% blocktrans %}Please contact us if you do not receive the verification email within a few minutes.{% endblocktrans %}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

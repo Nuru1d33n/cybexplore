@@ -1,0 +1,19 @@
+<section class="section cta-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 me-auto text-center text-md-start mb-5 mb-md-0">
+          <h2>Subscribe Now!</h2>
+          <p>Subscribe today for a constant source of knowledge and inspiration.</p>
+        </div>
+        <div class="col-md-5 text-center text-md-end">
+          <form action="" method="post">
+            {% csrf_token %}
+            <input type="email" name="sub_mail" id="id_sub_mail" class="form-control" placeholder="Email Address">
+            
+            <button type="submit" class="w-100 mb-2" style="background-color: #2d71a1; border: none; padding: 10px;">Subscribe</button>
+          </form>
+          {% comment %} <p><a href="#" class="btn d-inline-flex align-items-center"><i class="bx bxl-apple"></i><span>App store</span></a> <a href="#" class="btn d-inline-flex align-items-center"><i class="bx bxl-play-store"></i><span>Google play</span></a></p> {% endcomment %}
+        </div>
+      </div>
+    </div>
+</section><!-- End CTA Section -->

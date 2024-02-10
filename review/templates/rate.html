@@ -1,0 +1,48 @@
+{% load static %}
+
+
+<section class="section border-top border-bottom">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-md-8">
+        <h2 class="section-heading">Review From Our Users</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-7">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+              {% for rev in revs %}
+                  <div class="swiper-slide">
+                      <div class="review text-center">
+                      <p class="stars">
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill muted"></span>
+                      </p>
+                      <h3>{{ rev.heading }}</h3>
+                      <blockquote>
+                          <p>{{ rev.content }}</p>
+                      </blockquote>
+
+                      <p class="review-user">
+                        <img src="{{ rev.profile.image.url }}" alt="{{ rev.profile.image.name }}" class="img-fluid rounded-circle mb-3">
+                        <span class="d-block">
+                        <span class="text-black">{{ rev.profile.first_name }}</span>, &mdash; App User</span>
+                      </p>
+
+                      </div>
+                  </div><!-- End testimonial item -->
+              {% endfor %}
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+{% extends "account/base_entrance.html" %}
+{% load i18n static %}
+{% load account %}
+
+{% block head_title %}
+    {% trans "Confirm Email Address" %}
+{% endblock head_title %}
+{% block content %}
+<div class="wrapper">
+    <div class="auth-content">
+        <div class="card">
+            <div class="card-body text-center">
+                <div class="mb-4">
+                    <img class="brand" style="width: 200px;" src="{% static 'assets/img/logo-edi.png' %}" alt="bootstraper logo">
+                </div>
+                <h3 class="mb-4 text-muted">{% trans "Confirm Email Address" %}</h3>
+                
+                {% if confirmation %}
+                {% user_display confirmation.email_address.user as user_display %}
+                {% if can_confirm %}
+                    <p>
+                        {% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an email address for user {{ user_display }}.{% endblocktrans %}
+                    </p>
+                    {% url 'account_confirm_email' confirmation.key as action_url %}
+                    <form method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary shadow-2 mb-4">
+                                {% trans 'Confirm' %}
+                            </button>
+                    </form>
+                {% else %}
+                    <p>
+                        {% blocktrans %}Unable to confirm {{ email }} because it is already confirmed by a different account.{% endblocktrans %}
+                    </p>
+                {% endif %}
+                {% else %}
+                    {% url 'account_email' as email_url %}
+                    <p>
+                        {% blocktrans %}This email confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new email confirmation request</a>.{% endblocktrans %}
+                    </p>
+                {% endif %}
+
+
+               
+                <p class="mb-0 text-muted">{% blocktrans %}Please contact us if you have any trouble resetting your password.{% endblocktrans %}</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <h1>
+        {% trans "Confirm Email Address" %}
+    </h1>
+
+{% endblock content %}

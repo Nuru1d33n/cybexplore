@@ -1,0 +1,18 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: [127.0.0.1:8000] Please Confirm Your Email Address
+From: info@exp.host20.uk
+To: admin@me.io
+Date: Fri, 09 Feb 2024 08:56:17 -0000
+Message-ID: <170746897721.112986.13330508280714220172@explorer>
+
+Hello from 127.0.0.1:8000!
+
+You're receiving this email because user admin@me.io has given your email address to register an account on 127.0.0.1:8000.
+
+To confirm this is correct, go to http://127.0.0.1:8000/accounts/confirm-email/MQ:1rYMgD:Y-60OT_FaZa2miktiBczEpNgRNALTOxC9den_Bh5IUU/
+
+Thank you for using 127.0.0.1:8000!
+127.0.0.1:8000
+-------------------------------------------------------------------------------

@@ -1,0 +1,19 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: [127.0.0.1:8000] Password Reset Email
+From: info@exp.host20.uk
+To: admin@me.io
+Date: Fri, 09 Feb 2024 08:56:01 -0000
+Message-ID: <170746896143.112986.9498252525828116407@explorer>
+
+Hello from 127.0.0.1:8000!
+
+You're receiving this email because you or someone else has requested a password reset for your user account.
+It can be safely ignored if you did not request a password reset. Click the link below to reset your password.
+
+http://127.0.0.1:8000/accounts/password/reset/key/2-c24gtd-264f34f29a755abf943e632562732ee8/
+
+Thank you for using 127.0.0.1:8000!
+127.0.0.1:8000
+-------------------------------------------------------------------------------

@@ -1,0 +1,17 @@
+<form method="post">
+    {% csrf_token %}
+    <div class="form-content">
+                    
+        {% for field in form %}
+        <div class="{{ field.id_for_label }}">
+          {{ field.label }}
+          {{ field }}
+        </div>
+        <p>{{ field.errors }}</p>
+        <p>{{ field.error_messages }}</p>
+        
+        {% endfor %}
+      
+        <button type="submit" id="submit" class="form-submit">Submit</button>
+    </div>
+</form>

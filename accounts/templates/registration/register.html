@@ -1,0 +1,23 @@
+
+
+<h1>Validate your email</h1>
+
+<div class="con">
+    <form action="" method="post">
+        {% csrf_token %}
+            Confirm Email address : <input type="email" name="email" maxlength="254" required id="id_email"> <br >
+
+            <p>  </p>
+        
+             <input type="password" value="password" hidden name="password1" autocomplete="new-password" required aria-describedby="id_password1_helptext" id="id_password1"> <br >
+
+        <button type="submit">Register</button>
+        <p>  </p>
+        
+            <input type="password" value="password" hidden name="password2" autocomplete="new-password" required aria-describedby="id_password2_helptext" id="id_password2"> <br >
+
+            <p>  </p>
+        
+            
+    </form>
+</div>

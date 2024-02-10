@@ -1,0 +1,10 @@
+<h1>Lgin</h1>
+<div class="con">
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+            
+        <button type="submit">Register</button>
+    </form>
+</div>
